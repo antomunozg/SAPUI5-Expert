@@ -3,24 +3,14 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
     <Shell >
         <App>
-            <Page title="{i18n>appTitle}">
-                <content>
-                    <Panel headerText="{i18n>helloPanel}" class="sapUiResponsiveMargin" width="auto">
-                        <content>
-                            <Button id="_IDGenButton1" 
-                                    text="{i18n>showHelloButtonText}" 
-                                    press=".onShowHellow" 
-                                    class="sapUiSmallMarginEnd"/>
-                            <Input id="_IDGenInput1" 
-                                    type="Text" 
-                                    value="{/recipient/name}" 
-                                    width="60%" 
-                                    valueLiveUpdate="true"/>
-                            <Text text="Hello {/recipient/name}" class="sapUiSmallMargin boldElements"/>
-                        </content>
-                    </Panel>
-                </content>
-            </Page>
+            <pages>
+                <Page title="{i18n>appTitle}">
+                    <content>
+                        <mvc:XMLView viewName="logaligroup.SAPUI5.view.HelloPanel"></mvc:XMLView>
+                    </content>
+                </Page>
+            </pages>
+
         </App>
     </Shell>
 </mvc:View>
